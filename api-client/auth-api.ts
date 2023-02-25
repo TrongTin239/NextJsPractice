@@ -1,4 +1,4 @@
-import { LoginPayload } from "pages/models";
+import { LoginPayload } from "pages/models/index.page";
 import { axiosClient } from "./axiosClinet";
 
 export const authApi = {

@@ -1,4 +1,4 @@
-import { useAuth } from "hooks";
+import { useAuth } from "hooks/index.page";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 export interface AuthProps {

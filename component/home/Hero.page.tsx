@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import { Container, Stack } from "@mui/system";
-import { images } from "constants/images";
+import { images } from "constants/images.page";
 
 import Image from "next/image";
 

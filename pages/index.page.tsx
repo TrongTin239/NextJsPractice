@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import { HeroSection } from "component/home";
+import { HeroSection } from "component/home/index.page";
 
-import { MainLayout } from "component/layout";
+import { MainLayout } from "component/layout/index.page";
 
 export interface indexProps {
   postList: any[];

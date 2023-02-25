@@ -2,7 +2,7 @@ import { Box, Container, Link as MuiLink, Stack } from "@mui/material";
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ROUT_LIST } from "./route";
+import { ROUT_LIST } from "./route.page";
 export interface HeaderDesktopProps {}
 
 export default function HeaderDesktop(props: HeaderDesktopProps) {

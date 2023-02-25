@@ -1,4 +1,4 @@
-import { useAuth } from "hooks";
+import { useAuth } from "hooks/index.page";
 import * as React from "react";
 import { authApi } from "../api-client";
 import { useRouter } from "next/router";

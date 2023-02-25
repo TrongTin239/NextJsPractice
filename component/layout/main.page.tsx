@@ -1,9 +1,9 @@
 // tsrpfc export dạng name
 import { Box } from "@mui/material";
 import { Stack } from "@mui/system";
-import { Footer, Header } from "component/common";
+import { Footer, Header } from "component/common/index.page";
 
-import { LayoutProps } from "pages/models";
+import { LayoutProps } from "pages/models/index.page";
 
 export interface MainLayoutProps {}
 

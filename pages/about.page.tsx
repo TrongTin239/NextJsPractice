@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { MainLayout } from "component/layout";
+import { MainLayout } from "component/layout/index.page";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 export interface aboutProps {}

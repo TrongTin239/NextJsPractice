@@ -9,7 +9,7 @@ import ListItemText from "@mui/material/ListItemText";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Link from "next/dist/client/link";
 import * as React from "react";
-import { ROUT_LIST } from "./route";
+import { ROUT_LIST } from "./route.page";
 type Anchor = "top" | "left" | "bottom" | "right";
 
 export default function SwipeableTemporaryDrawer() {

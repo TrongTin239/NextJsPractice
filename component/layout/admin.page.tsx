@@ -1,8 +1,8 @@
-import { LayoutProps } from "pages/models";
+import { LayoutProps } from "pages/models/index.page";
 import * as React from "react";
 import Link from "next/link";
-import { Auth } from "component/common";
-import { useAuth } from "hooks";
+import { Auth } from "component/common/index.page";
+import { useAuth } from "hooks/index.page";
 import { useRouter } from "next/dist/client/router";
 export interface AdminLayoutProps {}
 

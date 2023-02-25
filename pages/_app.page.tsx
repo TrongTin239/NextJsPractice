@@ -4,10 +4,10 @@ import theme from "@/utils/theme";
 import { CacheProvider } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
-import { EmptyLayout } from "component/layout";
+import { EmptyLayout } from "component/layout/index.page";
 import { SWRConfig } from "swr";
 import "../styles/globals.css";
-import { AppPropsWithLayout } from "./models";
+import { AppPropsWithLayout } from "./models/index.page";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
