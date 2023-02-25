@@ -5,7 +5,7 @@ export interface IStudentDetailProps {
   studentID: string;
 }
 
-export default function StudentDetail({ studentID }: IStudentDetailProps) {
+export function StudentDetail({ studentID }: IStudentDetailProps) {
   const { data, error, mutate, isValidating } = useSWR(
     `/students/${studentID}`
   );

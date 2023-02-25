@@ -1,3 +1,3 @@
-export * from "./admin";
-export * from "./main";
-export * from "./empty";
+export { AdminLayout } from "./admin";
+export { MainLayout } from "./main";
+export { EmptyLayout } from "./empty";

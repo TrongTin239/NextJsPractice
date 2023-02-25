@@ -1,2 +1,6 @@
-export * from "./common";
-export * from "./auth";
+export type {
+  LayoutProps,
+  NextPageWithLayout,
+  AppPropsWithLayout,
+} from "./common";
+export type { LoginPayload } from "./auth";

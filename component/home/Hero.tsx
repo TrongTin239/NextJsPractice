@@ -4,9 +4,11 @@ import { images } from "constants/images";
 
 import Image from "next/image";
 
-export default function HeroSection() {
+export function HeroSection() {
+  const CV = require("../../assets/CV_FE.pdf");
+
   return (
-    <Box component={"section"} pt={18} pb={9}>
+    <Box component={"section"} pt={{ md: 18, xs: 4 }} pb={{ md: 9, sx: 7 }}>
       <Container
         sx={{
           ".MuiContainer-root": {
@@ -14,28 +16,30 @@ export default function HeroSection() {
           },
         }}
       >
-        <Stack gap={"30px"} flexDirection={"row"} alignItems={"flex-start"}>
-          <Box
-            sx={{
-              paddingLeft: "-24px",
-            }}
-          >
+        <Stack
+          gap={"30px"}
+          flexDirection={{ md: "row", xs: "column-reverse" }}
+          alignItems={{ md: "flex-start", xs: "center" }}
+          justifyContent={"center"}
+        >
+          <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
             <Typography
               component={"h1"}
               variant="h3"
               fontWeight={"bold"}
-              mb={5}
+              mb={{ xs: 3.5, md: 5 }}
             >
               Hi, I am Tin, <br />
               Front-end Developer
             </Typography>
-            <Typography mb={5}>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
+            <Typography mb={{ xs: 3.5, md: 5 }}>
+              Now currently graduated from Hutech university. I want to find a
+              working environment that is suitable to the knowledge I have
+              learned and I want to learn from experience and develop more in
+              the future
             </Typography>
             <Button size="large" variant="contained">
-              <Typography component={"a"} download href={images.CV}>
+              <Typography component={"a"} download href={CV}>
                 Download Resume
               </Typography>
             </Button>

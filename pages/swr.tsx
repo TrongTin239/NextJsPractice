@@ -1,4 +1,4 @@
-import StudentDetail from "component/swr/StudentDetail";
+import { StudentDetail } from "component/swr";
 import * as React from "react";
 
 export default function SWRPage() {

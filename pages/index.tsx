@@ -1,8 +1,7 @@
 import { Box } from "@mui/material";
-import HeroSection from "component/home/Hero";
+import { HeroSection } from "component/home";
+
 import { MainLayout } from "component/layout";
-import { GetStaticProps, GetStaticPropsContext } from "next";
-import React, { useEffect, useState } from "react";
 
 export interface indexProps {
   postList: any[];

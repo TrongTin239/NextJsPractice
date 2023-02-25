@@ -1,8 +1,8 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
 
 // Create a theme instance.
-const theme = createTheme({
+let theme = createTheme({
   typography: {
     fontFamily: " 'Heebo', sans-serif;",
   },
@@ -80,5 +80,11 @@ const theme = createTheme({
     },
   },
 });
-
+// theme.typography.h3 = {
+//   fontSize: "2rem",
+//   [theme.breakpoints.up("md")]: {
+//     fontSize: "3rem",
+//   },
+// };
+theme = responsiveFontSizes(theme);
 export default theme;

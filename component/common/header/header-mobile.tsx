@@ -45,9 +45,14 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <Box textAlign={"right"} onClick={toggleDrawer("right", false)}>
+        <Box textAlign={"right"} pr={2} onClick={toggleDrawer("right", false)}>
           {" "}
-          <CloseIcon fontSize="large" />{" "}
+          <CloseIcon
+            fontSize="large"
+            sx={{
+              cursor: "pointer",
+            }}
+          />{" "}
         </Box>
         {ROUT_LIST.map((text, index) => (
           <ListItem key={text.label} disablePadding>
@@ -69,7 +74,11 @@ export default function SwipeableTemporaryDrawer() {
         display: { lg: "none", md: "block" },
       }}
     >
-      <Menu onClick={toggleDrawer("right", true)} />
+      <Menu
+        onClick={toggleDrawer("right", true)}
+        sx={{ cursor: "pointer", marginRight: 2 }}
+        fontSize={"large"}
+      />
       {(["left", "right", "top", "bottom"] as const).map((anchor) => (
         <Box display={"none"} key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
