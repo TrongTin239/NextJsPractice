@@ -1,7 +1,7 @@
 import { Box, Typography, Link as MuiLink } from "@mui/material";
 import { Container, Stack } from "@mui/system";
 import Link from "next/link";
-import { Post } from "pages/models/post";
+import { Post } from "models/post";
 import PostCard from "./post-card";
 
 export interface RecentPostProps {}

@@ -1,7 +1,7 @@
 import { Chip, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Image from "next/image";
-import { Work } from "pages/models/works";
+import { Work } from "models/works";
 import * as React from "react";
 import { CldImage } from "next-cloudinary";
 export interface WorkCardsProps {

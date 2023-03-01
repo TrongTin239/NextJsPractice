@@ -1,6 +1,6 @@
 import { Box, Divider, Stack } from "@mui/material";
 import PostCard from "component/home/post-card";
-import { Work } from "pages/models/works";
+import { Work } from "models/works";
 import * as React from "react";
 import WorkCards from "./work-card";
 

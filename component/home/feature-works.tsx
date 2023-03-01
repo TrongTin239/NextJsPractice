@@ -1,8 +1,8 @@
 import { Box, Typography, Link as MuiLink } from "@mui/material";
 import { Container, Stack } from "@mui/system";
 import Link from "next/link";
-import { Post } from "pages/models/post";
-import { Work } from "pages/models/works";
+import { Post } from "models/post";
+import { Work } from "models/works";
 import WorkList from "work/work-list";
 import PostCard from "./post-card";
 

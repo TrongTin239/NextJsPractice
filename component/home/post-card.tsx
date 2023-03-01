@@ -1,5 +1,5 @@
 import { Card, CardContent, Typography } from "@mui/material";
-import { Post } from "pages/models/post";
+import { Post } from "models/post";
 import React from "react";
 import Divider from "@mui/material/Divider";
 import { Box } from "@mui/system";
