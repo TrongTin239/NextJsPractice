@@ -5,12 +5,17 @@ import { HeroSection } from "component/home/index.page";
 import RecentPost from "component/home/recent-post.page";
 
 import { MainLayout } from "component/layout/index.page";
+import useDownloader from "react-use-downloader";
 
 export interface indexProps {
   postList: any[];
 }
 
 export default function Home({ postList }: indexProps) {
+  const { size, elapsed, percentage, download, cancel, error, isInProgress } =
+    useDownloader();
+  const fileUrl = "../../assets/CV_FE.pdf";
+  const fileName = "NguyenTrongTin_FE_0348652767";
   return (
     <Box>
       <SEO
@@ -22,7 +27,7 @@ export default function Home({ postList }: indexProps) {
           url: "https://learn-nextjs-mibiz4rcc-trongtin239.vercel.app/",
         }}
       />
-      <HeroSection />
+      <HeroSection download={download} fileUrl={fileUrl} filename={fileName} />
       <RecentPost />
       <FeatureWorks />
     </Box>
