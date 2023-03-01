@@ -2,7 +2,7 @@
 import { Box } from "@mui/material";
 import { Stack } from "@mui/system";
 import { Footer, Header } from "component/common/index.page";
-import LayoutProps from "pages/models/common.page";
+import { LayoutProps } from "pages/models/common.page";
 
 export interface MainLayoutProps {}
 

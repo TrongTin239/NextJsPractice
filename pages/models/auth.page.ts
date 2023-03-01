@@ -1,4 +1,4 @@
-export default interface LoginPayload {
+export interface LoginPayload {
   username: string;
   password: string;
 }

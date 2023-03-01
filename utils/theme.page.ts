@@ -81,6 +81,19 @@ let theme = createTheme({
         },
       ],
     },
+    MuiChip: {
+      variants: [
+        {
+          props: { color: "default" },
+          style: {
+            backgroundColor: "#142850",
+            color: "white",
+            fontWeight: "bold",
+            fontSize: "16px",
+          },
+        },
+      ],
+    },
   },
 });
 // theme.typography.h3 = {

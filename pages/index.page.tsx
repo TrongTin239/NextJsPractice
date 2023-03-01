@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import FeatureWorks from "component/home/feature-works";
 import { HeroSection } from "component/home/index.page";
 import RecentPost from "component/home/recent-post.page";
 
@@ -13,6 +14,7 @@ export default function Home({ postList }: indexProps) {
     <Box>
       <HeroSection />
       <RecentPost />
+      <FeatureWorks />
     </Box>
   );
 }
