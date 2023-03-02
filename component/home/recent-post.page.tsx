@@ -10,16 +10,19 @@ export default function RecentPost(props: RecentPostProps) {
   const postList: Post[] = [
     {
       id: "1",
+      slug: "",
+
       title: "Making a design system from scratch",
-      publishedDate: "1677322207417",
+      publishedDate: "2023-02-28T03:00:00Z",
       tagList: ["Figma", "Icon Design"],
       description:
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
     },
     {
       id: "2",
+      slug: "",
       title: "Creating pixel perfect icons in Figma",
-      publishedDate: "1677322207417",
+      publishedDate: "2023-02-27T03:00:00Z",
       tagList: ["Design", "Pattern"],
       description:
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
