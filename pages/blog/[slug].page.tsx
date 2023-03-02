@@ -1,4 +1,7 @@
 import { getBlogList } from "@/utils/post";
+import { Box } from "@mui/material";
+import { Container } from "@mui/system";
+import { MainLayout } from "component/layout/main.page";
 import { Post } from "models/post";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 
@@ -10,17 +13,19 @@ export default function PostDetailPage({ post }: BlogPageProps) {
   if (!post) return null;
 
   return (
-    <div>
-      <h1>Post Detail Page</h1>
+    <Box>
+      <Container>
+        <h1>Post Detail Page</h1>
 
-      <p>{post.title}</p>
-      <p>{post.author?.name}</p>
-      <p>{post.description}</p>
-      <p>{post.mdContent}</p>
-    </div>
+        <p>{post.title}</p>
+        <p>{post.author?.name}</p>
+        <p>{post.description}</p>
+        <p>{post.mdContent}</p>
+      </Container>
+    </Box>
   );
 }
-
+PostDetailPage.Layout = MainLayout;
 export const getStaticPaths: GetStaticPaths = async () => {
   const postList = await getBlogList();
 

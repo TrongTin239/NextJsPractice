@@ -40,12 +40,10 @@ export function HeroSection({ download, fileUrl, filename }: HeroSectionprops) {
               learned and I want to learn from experience and develop more in
               the future
             </Typography>
-            <Button
-              size="large"
-              variant="contained"
-              onClick={() => download(fileUrl, filename)}
-            >
-              <Typography>Download Resume</Typography>
+            <Button size="large" variant="contained">
+              <Typography component={"a"} href={images.CV} download>
+                Download Resume
+              </Typography>
             </Button>
           </Box>
           <Box

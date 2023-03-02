@@ -5,6 +5,7 @@ import { HeroSection } from "component/home/index.page";
 import RecentPost from "component/home/recent-post.page";
 
 import { MainLayout } from "component/layout/index.page";
+import { images } from "constants/images.page";
 import useDownloader from "react-use-downloader";
 
 export interface indexProps {
@@ -14,7 +15,7 @@ export interface indexProps {
 export default function Home({ postList }: indexProps) {
   const { size, elapsed, percentage, download, cancel, error, isInProgress } =
     useDownloader();
-  const fileUrl = "../../assets/CV_FE.pdf";
+  const fileUrl = images.CV;
   const fileName = "NguyenTrongTin_FE_0348652767";
   return (
     <Box>
