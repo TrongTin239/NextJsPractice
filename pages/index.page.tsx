@@ -15,7 +15,7 @@ export interface indexProps {
 export default function Home({ postList }: indexProps) {
   const { size, elapsed, percentage, download, cancel, error, isInProgress } =
     useDownloader();
-  const fileUrl = images.CV;
+  const fileUrl = "../../assets/CV_FE.pdf";
   const fileName = "NguyenTrongTin_FE_0348652767";
   return (
     <Box>
