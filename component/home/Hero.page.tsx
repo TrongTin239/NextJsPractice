@@ -38,7 +38,7 @@ export function HeroSection({ download, fileUrl, filename }: HeroSectionprops) {
               Now currently graduated from Hutech university. I want to find a
               working environment that is suitable to the knowledge I have
               learned and I want to learn from experience and develop more in
-              the future
+              the future.
             </Typography>
             <Button
               size="large"
