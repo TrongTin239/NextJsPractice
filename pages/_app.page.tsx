@@ -6,8 +6,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { EmptyLayout } from "component/layout/index.page";
 import { SWRConfig } from "swr";
-import "../styles/globals.css";
 import { AppPropsWithLayout } from "../models/common.page";
+import "../styles/globals.css";
+import "../styles/prism.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
