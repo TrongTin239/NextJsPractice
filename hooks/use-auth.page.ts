@@ -1,3 +1,4 @@
+import { LoginPayload } from "models/auth.page";
 import useSWR, { useSWRConfig } from "swr";
 import { PublicConfiguration } from "swr/_internal";
 import { authApi } from "../api-client";
@@ -18,11 +19,8 @@ export function useAuth(options?: Partial<PublicConfiguration>) {
     ...options,
   });
   const firstLoading = profile === undefined && error === undefined;
-  async function Login() {
-    await authApi.login({
-      username: "test1",
-      password: "123123",
-    });
+  async function Login(payload: LoginPayload) {
+    await authApi.login(payload);
     await mutate();
   }
   async function Logout() {

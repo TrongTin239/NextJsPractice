@@ -11,4 +11,8 @@ export const ROUT_LIST = [
     label: "Blog",
     path: "/blog",
   },
+  {
+    label: "Login",
+    path: "/login",
+  },
 ];

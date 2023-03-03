@@ -2,27 +2,31 @@ import { useAuth } from "hooks/index.page";
 import * as React from "react";
 import { authApi } from "../api-client";
 import { useRouter } from "next/router";
+import { LoginFrom } from "component/auth/loginForm";
+import { MainLayout } from "component/layout/main.page";
+import { LoginPayload } from "models/auth.page";
+
 export default function LoginPage() {
   const router = useRouter();
   const { profile, Login, Logout } = useAuth({
     revalidateOnMount: false,
   });
-  async function HandleLoginClick() {
+  async function HandleLoginSubmit(payload: LoginPayload) {
     try {
-      await Login();
-      router.push("/about");
+      await Login(payload);
+      // router.push("/about");
     } catch (error) {
       console.log("fail to login", error);
     }
   }
-  async function HandleLogoutClick() {
-    try {
-      await Logout();
-      console.log("redirect to login page");
-    } catch (error) {
-      console.log("fail to logout", error);
-    }
-  }
+  // async function HandleLogoutClick() {
+  //   try {
+  //     await Logout();
+  //     console.log("redirect to login page");
+  //   } catch (error) {
+  //     console.log("fail to logout", error);
+  //   }
+  // }
   // async function HandleGetProfileClick() {
   //   try {
   //     authApi.getProfile();
@@ -32,11 +36,8 @@ export default function LoginPage() {
   // }
   return (
     <div>
-      <h1>Login page</h1>
-      <p>Profile: {JSON.stringify(profile || {}, null, 4)}</p>
-      <button onClick={HandleLoginClick}> login</button>
-
-      <button onClick={HandleLogoutClick}> log out</button>
+      <LoginFrom onSubmit={HandleLoginSubmit} />
     </div>
   );
 }
+LoginPage.Layout = MainLayout;
