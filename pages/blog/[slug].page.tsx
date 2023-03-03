@@ -15,6 +15,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkPrism from "remark-prism";
 import Script from "next/script";
+import SEO from "component/common/seo";
 export interface BlogPageProps {
   post: Post;
 }
@@ -25,6 +26,14 @@ export default function PostDetailPage({ post }: BlogPageProps) {
   return (
     <Box>
       <Container>
+        <SEO
+          data={{
+            title: `${post.title}`,
+            description: `${post.description}`,
+            thumbnailUrl: `${post.thumbailUrl}`,
+            url: `${process.env.HOST_URL}/blog/${post.slug}`,
+          }}
+        />
         <h1>Post Detail Page</h1>
 
         <p>{post.title}</p>

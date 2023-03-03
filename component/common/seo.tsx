@@ -15,7 +15,7 @@ export default function SEO({ data }: SEOProps) {
   return (
     <Head>
       {/* <!-- Primary Meta Tags --> */}
-      <title>NextJs Practice | Nguyễn Trọng Tín</title>
+      <title> {title} </title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
 

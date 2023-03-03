@@ -19,6 +19,7 @@ export async function getBlogList(): Promise<Post[]> {
       id: fileName,
       slug: data.slug,
       title: data.title,
+      thumbailUrl: data.image,
       author: {
         name: data.author,
         title: data.author_title,

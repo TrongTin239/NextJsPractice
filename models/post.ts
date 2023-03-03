@@ -11,6 +11,7 @@ export interface Post {
   author?: Author;
   mdContent?: string;
   htmlContent?: string;
+  thumbailUrl?: string;
 }
 export interface Author {
   name: string;
