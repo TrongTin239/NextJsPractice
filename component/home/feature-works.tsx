@@ -3,7 +3,7 @@ import { Container, Stack } from "@mui/system";
 import Link from "next/link";
 import { Post } from "models/post";
 import { Work } from "models/works";
-import WorkList from "work/work-list";
+import WorkList from "pages/work/work-list";
 import PostCard from "./post-card";
 
 export interface RecentPostProps {}

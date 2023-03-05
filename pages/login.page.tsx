@@ -14,7 +14,7 @@ export default function LoginPage() {
   async function HandleLoginSubmit(payload: LoginPayload) {
     try {
       await Login(payload);
-      // router.push("/about");
+      router.push("/");
     } catch (error) {
       console.log("fail to login", error);
     }

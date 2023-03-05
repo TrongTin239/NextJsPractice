@@ -678,6 +678,11 @@
   resolved "https://registry.npmjs.org/@types/extend/-/extend-3.0.1.tgz"
   integrity sha512-R1g/VyKFFI2HLC1QGAeTtCBWCo6n75l41OnsVYNbmKG+kempOESaodf6BeJyUM3Q0rKa/NQcTHbB2+66lNnxLw==
 
+"@types/file-saver@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.npmjs.org/@types/file-saver/-/file-saver-2.0.5.tgz"
+  integrity sha512-zv9kNf3keYegP5oThGLaPk8E081DFDuwfqjtiTzm6PoxChdJ1raSuADf2YGCVIyrSynLrgc8JWv296s7Q7pQSQ==
+
 "@types/hast@^2.0.0":
   version "2.3.4"
   resolved "https://registry.npmjs.org/@types/hast/-/hast-2.3.4.tgz"
@@ -2075,6 +2080,11 @@ file-loader@^6.2.0:
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
+
+file-saver@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.npmjs.org/file-saver/-/file-saver-2.0.5.tgz"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
 
 fill-range@^7.0.1:
   version "7.0.1"

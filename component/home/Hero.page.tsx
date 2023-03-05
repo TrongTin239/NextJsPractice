@@ -1,14 +1,18 @@
 import { Box, Button, Typography } from "@mui/material";
 import { Container, Stack } from "@mui/system";
 import { images } from "constants/images.page";
-import useDownloader from "react-use-downloader";
 import Image from "next/image";
-export interface HeroSectionprops {
-  download: any;
-  fileUrl: string;
-  filename: string;
-}
-export function HeroSection({ download, fileUrl, filename }: HeroSectionprops) {
+
+import { saveAs } from "file-saver";
+export interface HeroSectionprops {}
+export function HeroSection({}: HeroSectionprops) {
+  const downloadFile = () => {
+    // Lấy tệp cần tải xuống
+    const fileUrl =
+      "https://drive.google.com/file/d/1kgCogITk9JHBosU1dmMsWcgv2uXxUsOA/view?usp=share_link";
+    // Tải xuống tệp
+    saveAs(fileUrl, "NguyenTrongTin_Fe_0348652767");
+  };
   return (
     <Box component={"section"} pt={{ md: 18, xs: 4 }} pb={{ md: 9, sx: 7 }}>
       <Container
@@ -40,13 +44,7 @@ export function HeroSection({ download, fileUrl, filename }: HeroSectionprops) {
               learned and I want to learn from experience and develop more in
               the future.
             </Typography>
-            <Button
-              size="large"
-              variant="contained"
-              onClick={() => {
-                download(fileUrl, filename);
-              }}
-            >
+            <Button size="large" variant="contained" onClick={downloadFile}>
               <Typography>Download Resume</Typography>
             </Button>
           </Box>
