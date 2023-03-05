@@ -5,19 +5,12 @@ import { HeroSection } from "component/home/index.page";
 import RecentPost from "component/home/recent-post.page";
 
 import { MainLayout } from "component/layout/index.page";
-import { images } from "constants/images.page";
-import useDownloader from "react-use-downloader";
 
 export interface indexProps {
   postList: any[];
 }
 
 export default function Home({ postList }: indexProps) {
-  const { size, elapsed, percentage, download, cancel, error, isInProgress } =
-    useDownloader();
-  const fileUrl =
-    "https://drive.google.com/file/d/1kgCogITk9JHBosU1dmMsWcgv2uXxUsOA/view?usp=share_link";
-  const fileName = "NguyenTrongTin_FE_0348652767";
   return (
     <Box>
       <SEO
@@ -29,7 +22,7 @@ export default function Home({ postList }: indexProps) {
           url: "https://learn-nextjs-mibiz4rcc-trongtin239.vercel.app/",
         }}
       />
-      <HeroSection download={download} fileUrl={fileUrl} filename={fileName} />
+      <HeroSection />
       <RecentPost />
       <FeatureWorks />
     </Box>

@@ -45,7 +45,7 @@ export function HeroSection({}: HeroSectionprops) {
               the future.
             </Typography>
             <Button size="large" variant="contained" onClick={downloadFile}>
-              <Typography>Download Resume</Typography>
+              <Typography>My Resume</Typography>
             </Button>
           </Box>
           <Box
