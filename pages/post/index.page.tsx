@@ -15,7 +15,7 @@ export default function PostListPage({ posts }: PostListPageProps) {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <Link href={`/posts/${post.id}`}>
+            <Link href={`/post/${post.id}`}>
               <a>{post.title}</a>
             </Link>
           </li>
@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps<PostListPageProps> = async (
   // build-time
   // console.log('static props')
   const response = await fetch(
-    "https://js-post-api.herokuapp.com/api/posts?_page=1"
+    "https://js-post-api.herokuapp.com/api/posts?_page=1&_limit=5"
   );
   const data = await response.json();
   // console.log(data)

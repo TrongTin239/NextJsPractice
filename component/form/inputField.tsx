@@ -23,7 +23,7 @@ export function InputField({
     name,
     control,
   });
-  console.log(name, error);
+
   return (
     <TextField
       id="outlined-basic"

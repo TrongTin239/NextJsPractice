@@ -6,13 +6,10 @@ export const ROUT_LIST = [
   {
     label: "Works",
     path: "/works",
+    requireLogin: true,
   },
   {
     label: "Blog",
     path: "/blog",
-  },
-  {
-    label: "Login",
-    path: "/login",
   },
 ];

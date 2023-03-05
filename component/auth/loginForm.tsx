@@ -1,4 +1,4 @@
-import { Button, Container } from "@mui/material";
+import { Button, CircularProgress, Container } from "@mui/material";
 import { Box } from "@mui/system";
 import { InputField } from "component/form/inputField";
 import { MainLayout } from "component/layout/main.page";
@@ -24,7 +24,11 @@ export function LoginFrom({ onSubmit }: LoginFormProps) {
     })
     .required();
 
-  const { control, handleSubmit } = useForm<LoginPayload>({
+  const {
+    control,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = useForm<LoginPayload>({
     defaultValues: {
       username: "",
       password: "",
@@ -32,21 +36,32 @@ export function LoginFrom({ onSubmit }: LoginFormProps) {
     resolver: yupResolver(schema),
   });
 
-  function handleLoginSubmit(payload: LoginPayload) {
-    console.log(payload);
-    onSubmit?.(payload);
+  async function handleLoginSubmit(payload: LoginPayload) {
+    await onSubmit?.(payload);
   }
 
   return (
-    <Container>
-      <Box component={"form"} onSubmit={handleSubmit(handleLoginSubmit)}>
-        <InputField name="username" control={control} />
-        <InputField type="password" name="password" control={control} />
-        <Button type="submit" variant="contained">
-          {" "}
-          Login{" "}
-        </Button>
-      </Box>
-    </Container>
+    <Box
+      component={"form"}
+      onSubmit={handleSubmit(handleLoginSubmit)}
+      textAlign="right"
+    >
+      <InputField name="username" control={control} />
+      <InputField type="password" name="password" control={control} />
+      <Button
+        disabled={isSubmitting}
+        startIcon={
+          isSubmitting ? (
+            <CircularProgress color="inherit" size={"1em"} />
+          ) : null
+        }
+        type="submit"
+        variant="contained"
+        sx={{ mt: 2 }}
+      >
+        {" "}
+        Login{" "}
+      </Button>
+    </Box>
   );
 }

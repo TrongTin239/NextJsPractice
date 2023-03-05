@@ -16,7 +16,7 @@ export default async function handler(
     return res.status(404).json({ name: "method not supported" });
   }
   const respone = await fetch(
-    "https://js-post-api.herokuapp.com/api/posts?_page=1&_limit=10"
+    "https://js-post-api.herokuapp.com/api/posts?_page=2&_limit=5"
   );
   const responeJson = await respone.json();
   res.status(200).json(responeJson);

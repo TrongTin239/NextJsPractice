@@ -8,7 +8,8 @@ let theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#FF6464",
+      // main: "#FF6464",
+      main: "#000",
     },
     secondary: {
       light: "#EDF7FA",
@@ -93,6 +94,15 @@ let theme = createTheme({
           },
         },
       ],
+    },
+    MuiTextField: {
+      styleOverrides: {
+        // root: {
+        //   ".Mui-focused": {
+        //     color: "black",
+        //   },
+        // },
+      },
     },
   },
 });
