@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import { InputField } from "component/form/inputField";
 import { MainLayout } from "component/layout/main.page";
 import { LoginPayload } from "models/auth.page";
-import Reacr from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";

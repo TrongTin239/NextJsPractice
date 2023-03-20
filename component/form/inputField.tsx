@@ -39,8 +39,6 @@ export function InputField({
       helperText={error?.message}
       inputRef={ref}
       {...rest}
-    >
-      {value}
-    </TextField>
+    ></TextField>
   );
 }

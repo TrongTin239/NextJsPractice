@@ -4,6 +4,7 @@ import { useAuth } from "hooks/use-auth.page";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { ROUT_LIST } from "./route.page";
 export interface HeaderDesktopProps {
   token?: string | null;
@@ -18,7 +19,16 @@ export default function HeaderDesktop({ token }: HeaderDesktopProps) {
   const renderList = ROUT_LIST.filter(
     (route) => !route.requireLogin || isLoggedIn
   );
-  console.log(isLoggedIn);
+  // Method 1 to fix issue "Text content does not match server-rendered HTML."
+  // const [renderList, setRenderList] = useState(() =>
+  //   ROUT_LIST.filter((route) => !route.requireLogin)
+  // );
+  // useEffect(() => {
+  //   setRenderList(
+  //     ROUT_LIST.filter((route) => !route.requireLogin || isLoggedIn)
+  //   );
+  // }, [isLoggedIn]);
+
   return (
     <Box display={{ xs: "none", lg: "block" }} py={2}>
       <Container>

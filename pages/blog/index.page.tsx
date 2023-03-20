@@ -6,6 +6,7 @@ import { MainLayout } from "component/layout/main.page";
 import { Post } from "models/post";
 import { GetStaticProps } from "next";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 export interface BlogListPageProps {
   posts: Post[];
 }
